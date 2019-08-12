@@ -1,0 +1,13 @@
+venv/
+.vscode
+
+**/__pycache__/
+**/migrations/
+db.sqlite3
+media/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+gitCredentials.csv

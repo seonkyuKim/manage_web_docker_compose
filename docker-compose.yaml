@@ -1,0 +1,38 @@
+version: '3'
+services:
+
+  nginx:
+    # image: hopsprings2/nginx:0.2
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports: 
+      - "80:80"
+    volumes:
+      - static_volume:/src/static
+    depends_on:
+      - web
+    networks:
+      - nginx_network
+
+  web:
+    # image: hopsprings2/django:0.1
+    restart: always
+    build:
+      # Either a path to a directory containing a Dockerfile, or a url to a git repository.
+      context: ./manage_web
+      # Alternate Dockerfile.
+      dockerfile: Dockerfile
+    container_name: manage_web
+    volumes:
+      - static_volume:/src/static
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
+
+volumes:
+  static_volume:
