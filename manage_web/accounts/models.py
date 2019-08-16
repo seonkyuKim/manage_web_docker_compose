@@ -5,6 +5,8 @@ from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 
+from phonenumber_field.modelfields import PhoneNumberField
+
 import uuid
 
 # Create your models here.
@@ -123,6 +125,7 @@ class Editor(models.Model):
     user = models.ForeignKey('User', models.SET_NULL, db_column='user', null=True)
     name = models.CharField(max_length=10)
     profile_image = models.ImageField('프로필 사진', max_length=255, upload_to=editor_directory_path)
+    phone_number = PhoneNumberField()
 
 
     def __str__(self):
@@ -145,6 +148,7 @@ class Reviewer(models.Model):
     name = models.CharField(max_length=10)
     editor = models.ForeignKey(Editor, models.PROTECT, verbose_name='에디터')
     profile_image = models.ImageField('프로필 사진', max_length=255, upload_to=reviewer_directory_path)
+    
 
   
 
