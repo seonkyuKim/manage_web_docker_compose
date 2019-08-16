@@ -144,7 +144,7 @@ def reviewer_directory_path(instance, filename):
 
 class Reviewer(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey('User', models.SET_NULL, db_column='user', null=True)
+    user = models.OneToOneField('User', models.SET_NULL, db_column='user', null=True)
     name = models.CharField(max_length=10)
     editor = models.ForeignKey(Editor, models.PROTECT, verbose_name='에디터')
     profile_image = models.ImageField('프로필 사진', max_length=255, upload_to=reviewer_directory_path)
