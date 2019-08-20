@@ -21,5 +21,5 @@ EXPOSE 8000
 
 # gunicorn --reload manage_web.wsgi:application --bind 0.0.0.0:8000
 
-CMD ["gunicorn","--chdir", "/src", "manage_web.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "20"]
+CMD ["gunicorn","--chdir", "/src", "manage_web.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
 

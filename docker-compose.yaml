@@ -17,9 +17,6 @@ services:
     networks:
       - nginx_network
 
-  certbot:
-    image: certbot/certbot
-
   web:
     # image: hopsprings2/django:0.1
     restart: always
