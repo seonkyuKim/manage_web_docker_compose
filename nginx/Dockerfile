@@ -10,6 +10,10 @@ ADD /home/ec2-user/.ssh/private.key /etc/nginx/ssl/
 ADD /home/ec2-user/.ssh/cutypenguin.crt /etc/nginx/ssl/
 RUN chmod 600 /etc/nginx/ssl/private.key
 
+# remove default.conf
+RUN rm /etc/nginx/conf.d/default.conf
+
+
 RUN mkdir -p /etc/nginx/sites-enabled/\
     && ln -s /etc/nginx/sites-available/manage_web.conf /etc/nginx/conf.d/
 
