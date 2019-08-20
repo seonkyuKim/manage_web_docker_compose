@@ -228,7 +228,10 @@ class Review(models.Model):
 
     assessment = models.IntegerField('평가', blank=True, null=True, choices=assessment_choices)
     
-    pic_feedback = models.CharField('사진 피드백', blank=True, max_length=150)
+    menuboard_image_feedback = models.CharField('메뉴판사진 피드백', blank=True, max_length=500)
+    interior_image_feedback = models.CharField('매장사진 피드백', blank=True, max_length=500)
+    other_image_feedback = models.CharField('기타음식사진 피드백', blank=True, max_length=500)
+    pic_feedback = models.CharField('사진 피드백', blank=True, max_length=500)
     total_feedback = models.CharField('전체 피드백', blank=True, max_length=500)
 
 
@@ -409,7 +412,7 @@ class Menu(models.Model):
     price_unit = models.CharField('가격단위', max_length=10)
     price = models.PositiveIntegerField('가격 크기', null=True)
     star_rating = models.FloatField('별점', null=True, choices=score_choices)
-
+    menu_image_feedback = models.CharField('메뉴사진 피드백', max_length=500, blank=True)
    
 
     def __str__(self):

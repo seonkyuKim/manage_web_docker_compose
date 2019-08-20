@@ -2,7 +2,14 @@ FROM nginx:latest
 
 COPY manage_web.conf /etc/nginx/sites-available/
 
+# Move private key and crt to the container
+RUN mkdir /etc/nginx/ssl
+COPY /home/ubuntu/.ssh/private.key /etc/nginx/ssl/
+COPY /home/ubuntu/.ssh/penguin.crt /etc/nginx/ssl/
+RUN chmod 600 /etc/nginx/ssl/private.key
+
 RUN mkdir -p /etc/nginx/sites-enabled/\
     && ln -s /etc/nginx/sites-available/manage_web.conf /etc/nginx/conf.d/
+
 
 CMD ["nginx", "-g", "daemon off;"]

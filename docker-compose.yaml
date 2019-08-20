@@ -9,12 +9,16 @@ services:
     container_name: nginx
     ports: 
       - "80:80"
+      - "433:433"
     volumes:
       - static_volume:/src/static
     depends_on:
       - web
     networks:
       - nginx_network
+
+  certbot:
+    image: certbot/certbot
 
   web:
     # image: hopsprings2/django:0.1
