@@ -11,3 +11,6 @@ media/
 !.elasticbeanstalk/*.global.yml
 
 gitCredentials.csv
+
+**/private.key
+**/cutypenguin.crt
