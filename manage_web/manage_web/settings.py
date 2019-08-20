@@ -40,7 +40,7 @@ SECRET_KEY = get_secret("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '*',
+    'www.cutypenguin.com',
 ]
 
 def is_ec2_linux():
