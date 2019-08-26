@@ -46,6 +46,7 @@ ALLOWED_HOSTS = [
     '13.124.53.234',
     '127.0.0.1',
     'localhost',
+    'web',
 ]
 
 def is_ec2_linux():

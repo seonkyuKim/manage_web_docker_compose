@@ -19,4 +19,4 @@ RUN mkdir -p /etc/nginx/sites-enabled/\
 
 WORKDIR /etc/nginx
 
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off;"]
