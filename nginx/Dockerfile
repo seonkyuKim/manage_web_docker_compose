@@ -8,9 +8,9 @@ COPY sites-enabled/ /etc/nginx/sites-enabled
 RUN mkdir /etc/nginx/ssl
 # ADD ./private.key /etc/nginx/ssl/
 # ADD ./cutypenguin.crt /etc/nginx/ssl/
-ADD /home/ec2-user/.ssh/private.key /etc/nginx/ssl/
-ADD /home/ec2-user/.ssh/cutypenguin.crt /etc/nginx/ssl/
-RUN chmod 600 /etc/nginx/ssl/private.key
+# ADD /home/ec2-user/.ssh/private.key /etc/nginx/ssl/
+# ADD /home/ec2-user/.ssh/cutypenguin.crt /etc/nginx/ssl/
+# RUN chmod 600 /etc/nginx/ssl/private.key
 
 
 RUN mkdir -p /etc/nginx/sites-enabled/\
