@@ -42,6 +42,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'www.cutypenguin.com',
     'cutypenguin.com',
+    'https://ec2-13-124-53-234.ap-northeast-2.compute.amazonaws.com/',
+    '13.124.53.234',
 ]
 
 def is_ec2_linux():
