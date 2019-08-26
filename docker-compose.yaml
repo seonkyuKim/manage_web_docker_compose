@@ -31,11 +31,18 @@ services:
     volumes:
       - static_volume:/src/static
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - /etc/letsencrypt/:/etc/letsencrypt/
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
     expose:
       - "80"
     links:
       - web
+
+  certbot:
+    image: cerbot/certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
 
 
 volumes:
