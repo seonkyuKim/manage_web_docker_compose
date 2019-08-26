@@ -37,13 +37,15 @@ def get_secret(setting, secrets=secrets):
 SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'www.cutypenguin.com',
     'cutypenguin.com',
     'ec2-13-124-53-234.ap-northeast-2.compute.amazonaws.com/',
     '13.124.53.234',
+    '127.0.0.1',
+    'localhost',
 ]
 
 def is_ec2_linux():
