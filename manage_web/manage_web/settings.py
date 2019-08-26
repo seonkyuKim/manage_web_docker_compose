@@ -42,7 +42,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'www.cutypenguin.com',
     'cutypenguin.com',
-    'ec2-13-124-53-234.ap-northeast-2.compute.amazonaws.com/',
+    'ec2-13-124-53-234.ap-northeast-2.compute.amazonaws.com',
     '13.124.53.234',
     '127.0.0.1',
     'localhost',
