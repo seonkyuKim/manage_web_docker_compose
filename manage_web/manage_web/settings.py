@@ -41,6 +41,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'www.cutypenguin.com',
+    'cutypenguin.com',
 ]
 
 def is_ec2_linux():
