@@ -114,6 +114,8 @@ INSTALLED_APPS = [
 
     # For phonenumber
     'phonenumber_field',
+
+    'sslserver',
 ]
 
 MIDDLEWARE = [
