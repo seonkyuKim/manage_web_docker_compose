@@ -11,8 +11,8 @@ services:
       - static_volume:/src/static
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - /etc/letsencrypt/:/etc/letsencrypt/
-      
-
+    expose:
+      - "80"
     depends_on:
       - web
 
