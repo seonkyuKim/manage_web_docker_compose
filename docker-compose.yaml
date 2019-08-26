@@ -2,22 +2,21 @@ version: '3'
 services:
 
   nginx:
-    # image: hopsprings2/nginx:0.2
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
+    image: nginx:latest
     container_name: nginx
     ports: 
       - 80:80
-      - 433:433
+      - 443:443
     volumes:
       - static_volume:/src/static
-    # depends_on:
-    #   - web
-    # networks:
-    #   - nginx_network
-    links:
+      - ./nginx/manage_web.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/:/etc/letsencrypt/
+      - ./nginx/error.log:/etc/nginx/error_log.log
+      - ./nginx/cache/:/etc/nginx/cache
+
+    depends_on:
       - web
+
 
   web:
     # image: hopsprings2/django:0.1
@@ -32,12 +31,10 @@ services:
       - 8000:8000
     volumes:
       - static_volume:/src/static
-    # networks:
-    #   - nginx_network
+    expose:
+      - "8000"
 
-# networks:
-#   nginx_network:
-#     driver: bridge
+
 
 volumes:
   static_volume:
