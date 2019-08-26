@@ -36,3 +36,4 @@ phonenumbers
 # For deployment
 gunicorn
 django-sslserver
+uwsgi

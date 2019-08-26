@@ -8,8 +8,8 @@ services:
       dockerfile: Dockerfile
     container_name: nginx
     ports: 
-      - "80:80"
-      - "433:433"
+      - 80:80
+      - 433:433
     volumes:
       - static_volume:/src/static
     depends_on:
@@ -25,7 +25,9 @@ services:
       context: ./manage_web
       # Alternate Dockerfile.
       dockerfile: Dockerfile
-    container_name: manage_web
+    container_name: web
+    ports:
+      - 8000:8000
     volumes:
       - static_volume:/src/static
     networks:
