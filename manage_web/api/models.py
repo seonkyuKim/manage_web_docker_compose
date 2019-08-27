@@ -187,12 +187,7 @@ class Review(models.Model):
         (5.0, '5'),
     )
 
-    assessment_choices = (
-        (1, '1'),
-        (2, '2'), 
-        (3, '3'),
-    )
-
+   
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     restaurant = models.ForeignKey('Restaurant', on_delete=models.SET_NULL, verbose_name='음식점 이름',
         db_column='restaurant', blank=True, null=True)
@@ -226,7 +221,7 @@ class Review(models.Model):
     summary = models.CharField('한마디', max_length=40)
     summary_feedback = models.CharField('한마디 피드백', max_length=150, blank=True, null=True)
 
-    assessment = models.IntegerField('평가', blank=True, null=True, choices=assessment_choices)
+    assessment = models.CharField('평가', max_length=500, blank=True)
     
     menuboard_image_feedback = models.CharField('메뉴판사진 피드백', blank=True, max_length=500)
     interior_image_feedback = models.CharField('매장사진 피드백', blank=True, max_length=500)
