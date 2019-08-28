@@ -55,6 +55,7 @@ class RestaurantViewSet(mixins.CreateModelMixin,
                             viewsets.GenericViewSet):
     queryset = Restaurant.objects.filter(is_active=True)
     serializer_class = RestaurantSerializer
+    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend]
     filterset_class = RestaurantFilter
 
@@ -63,5 +64,6 @@ class RestaurantListViewSet(mixins.ListModelMixin,
                             viewsets.GenericViewSet):
     queryset = Restaurant.objects.filter(is_active=True)
     serializer_class = RestaurantListSerializer
+    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend]
     filterset_class = RestaurantFilter

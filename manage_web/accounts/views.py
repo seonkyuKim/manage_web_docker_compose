@@ -16,6 +16,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['email',]
 
@@ -26,3 +27,4 @@ class ReviewerViewSet(viewsets.ModelViewSet):
     """
     queryset = Reviewer.objects.all()
     serializer_class = ReviewerSerializer
+    permission_classes = [IsAuthenticated]
