@@ -84,7 +84,7 @@ class Restaurant(models.Model):
     registered_time = models.DateTimeField('등록 시간', auto_now_add=True)
     is_active = models.BooleanField('활성여부', default=True)
     active = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
-    reviewer = models.ForeignKey(Reviewer, on_delete=models.PROTECT, verbose_name='리뷰어', db_column='reviewer')
+    reviewer = models.ForeignKey(Reviewer, on_delete=models.PROTECT, verbose_name='리뷰어', db_column='reviewer', null=True)
     rejected_reason = models.CharField('거절사유', max_length=300, blank=True)
 
     size = models.CharField('크기', max_length=1, choices=size_choices, blank=True)
