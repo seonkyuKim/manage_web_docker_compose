@@ -45,7 +45,7 @@ class RestaurantFilter(filters.FilterSet):
 
     class Meta:
         model = Restaurant
-        fields = ['name', 'status', 'no_sales_info', 'address', ]
+        fields = ['name', 'status', 'no_sales_info', 'address', 'reviewer', ]
 
 # Create your views here.
 class RestaurantViewSet(mixins.CreateModelMixin, 
