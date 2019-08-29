@@ -84,7 +84,7 @@ class Restaurant(models.Model):
     registered_time = models.DateTimeField('등록 시간', auto_now_add=True)
     is_active = models.BooleanField('활성여부', default=True)
     active = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
-    reviewer = models.ForeignKey(Reviewer, on_delete=models.PROTECT, verbose_name='리뷰어', db_column='reviewer', null=True)
+    reviewer = models.ForeignKey(Reviewer, on_delete=models.PROTECT, verbose_name='리뷰어', db_column='reviewer', null=True, blank=True)
     rejected_reason = models.CharField('거절사유', max_length=300, blank=True)
 
     size = models.CharField('크기', max_length=1, choices=size_choices, blank=True)
@@ -97,7 +97,7 @@ class Restaurant(models.Model):
     
     restroom_cleanliness = models.CharField('화장실 청결도', max_length=4, choices=restroom_cleanliness_choices, blank=True)
 
-    image = models.ImageField('간판사진', max_length=255, upload_to=signboard_directory_path)
+    image = models.ImageField('간판사진', max_length=255, upload_to=signboard_directory_path, blank=True)
   
 
     def image_tag(self):
