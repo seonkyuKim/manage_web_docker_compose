@@ -18,6 +18,6 @@ This repository is backend for **review app** and **manage web**.
 
 **Social login**
 
-![](https://github.com/seonkyuKim/manage_web_docker_compose/blob/assets/images/social-login.png =250x500)
+<img src="https://github.com/seonkyuKim/manage_web_docker_compose/blob/assets/images/social-login.png" width="250" height="500"/>
 
 * Used own authentication server and use social auth/resource server and internal auth/resource server.
