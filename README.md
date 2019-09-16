@@ -66,7 +66,7 @@ This repository is backend for **review app** and **manage web**.
 
 ## Skills
 
-Django, DRF, AWS EC2, S3, Google Login, Nginx, gnicorn, Docker-compose
+Django, DRF, AWS EC2, S3, RDS(Maria DB) Google Login, Nginx, gnicorn, Docker-compose
 
 For more information : (가나비)[https://gonna-be.tistory.com]
 
