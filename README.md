@@ -60,4 +60,13 @@ This repository is backend for **review app** and **manage web**.
 
 <img src="https://github.com/seonkyuKim/manage_web_docker_compose/blob/master/images/confirm-standby-list.jpg" width="600" height="350"/>
 
+**Edit Review Page**
+
 <img src="https://github.com/seonkyuKim/manage_web_docker_compose/blob/master/images/working-area.jpg" width="600" height="350"/>
+
+## Skills
+
+Django, DRF, AWS EC2, S3, Google Login, Nginx, gnicorn, Docker-compose
+
+For more information : (가나비)[https://gonna-be.tistory.com]
+
