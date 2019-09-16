@@ -47,3 +47,17 @@ This repository is backend for **review app** and **manage web**.
 <img src="https://github.com/seonkyuKim/manage_web_docker_compose/blob/master/images/review-picture.png" width="200" height="500"/>
 
 </p>
+
+**My review**
+
+<p float="left">
+<img src="https://github.com/seonkyuKim/manage_web_docker_compose/blob/master/images/my-review.png" width="200" height="350"/>
+</p>
+
+## Manage Web
+
+**Confirm Standby List**
+
+<img src="https://github.com/seonkyuKim/manage_web_docker_compose/blob/master/images/confirm-standby-list.jpg" width="600" height="350"/>
+
+<img src="https://github.com/seonkyuKim/manage_web_docker_compose/blob/master/images/working-area.jpg" width="600" height="350"/>
